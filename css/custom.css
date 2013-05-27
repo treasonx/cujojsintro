@@ -1,0 +1,20 @@
+.icon-list {
+  font-size: 75px !important;
+  line-height: 75px !important;
+  margin-right: 10px !important;
+}
+
+.icon-table {
+  width: 100%;
+}
+
+.icon-table td {
+  text-align: center !important;
+  font-size: 75px;
+  padding: 10px;
+}
+
+.icon-large {
+  margin-top: 50px;
+  font-size: 175px !important;
+}

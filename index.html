@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+    
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="font/font.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+    <section>
+        <h1>cujojs</h1>
+        <div>The&nbsp;architectural toolkit for building highly modular, maintainable web applications that are easy to test and refactor with zero framework lockin.</div>
+        <div>
+            <br>
+        </div>
+        <h2>TL;DR</h2>
+        <div>Awesome libraries that make your life easier!</div>
+        <div>
+            <br>
+        </div>
+        <div>
+            <br>
+        </div>
+        <div>James Morrin</div>
+        <div>@treasonx</div>
+    </section>
+    <section>
+        <h2>What is Cujo?</h2>
+        <div>
+            <ul>
+                <li>Set of libraries used to build apps.</li>
+                <li>Not Dependent on any one library</li>
+                <li>Can be added to existing frameworks</li>
+            </ul>
+            <div style="text-align: left;">
+                <br>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/treasonx/images/15128/dog-rides-jet-ski.gif">
+            <br>
+        </div>
+    </section>
+    <section>
+        <h2>Meet the cujo lineup!</h2>
+        <div>
+            <br>
+        </div>
+        <table class="icon-table">
+          <tr>
+            <td><span class="icon-cujojs icon-curl icon-list"></span> curl</td>
+            <td><span class="icon-cujojs icon-cram icon-list"></span> cram</td>
+          </tr>
+          <tr>
+            <td><span class="icon-cujojs icon-meld icon-list"></span> meld</td>
+            <td><span class="icon-cujojs icon-when icon-list"></span> when</td>
+          </tr>
+          <tr>
+            <td><span class="icon-cujojs icon-msgs icon-list"></span> msgs</td>
+            <td><span class="icon-cujojs icon-rest icon-list"></span> rest</td>
+          </tr>
+          <tr>
+            <td><span class="icon-cujojs icon-poly icon-list"></span> poly</td>
+            <td><span class="icon-cujojs icon-wire icon-list"></span> wire</td>
+          </tr>
+          <tr>
+            <td><span class="icon-cujojs icon-cola icon-list"></span> cola</td>
+          </tr>
+        </table>
+    </section>
+    <section>
+        <section>
+        <h1>Curljs</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <span class="icon-cujojs icon-curl icon-large"></span>
+        </section>
+        <section>
+            <h2>What is it?</h2>
+            <div>A fast AMD and resource loader.</div>
+        </section>
+        <section>
+            <h2>What is it like?</h2>
+            <div>RequireJS&nbsp;</div>
+        </section>
+        <section>
+            <h2>What problem does it solve</h2>
+            <div>Makes it simple to breakup large application into smaller more manageable pieces.&nbsp;</div>
+            <div>
+                <br>
+            </div>
+            <div>The pieces can be individually loaded during development but also</div>
+        </section>
+    </section>
+    <section>
+        <section>
+            <h1>Cramjs</h1>
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="icon-cujojs icon-cram icon-large"></span>
+        </section>
+        <section>
+            <h2>What is it?</h2>
+            <div>
+                <br>
+            </div>
+            <div>A build tool for AMD and CommonJS Modules.</div>
+        </section>
+        <section>
+            <h2>What is it like?</h2>
+            <div>RequireJS's r.js build script.</div>
+        </section>
+        <section>
+            <h2>What Problem Does it Solve?</h2>
+            <div>
+                <br>
+            </div>
+            <div>Optimizes small modules into larger payloads</div>
+            <div>
+                <br>
+            </div>
+            <div>Automates building of assets for production</div>
+        </section>
+    </section>
+    <section>
+        <section>
+            <h1>meldjs</h1>
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="icon-cujojs icon-meld icon-large"></span>
+        </section>
+        <section>
+            <h2>What is it?</h2>
+            <div>
+                <br>
+            </div>
+            <div>AOP for JavaScript</div>
+        </section>
+        <section>
+            <h2>What is it like?</h2>
+            <div>
+                <br>
+            </div>
+            <div>Nothing that I know of for JS.</div>
+        </section>
+        <section>
+            <h2>What Problem does it solve?</h2>
+            <div>
+                <br>
+            </div>
+            <div>Add behavior to objects.</div>
+            <div>
+                <br>
+            </div>
+            <div>No Need to modify the source function.</div>
+            <div>
+                <br>
+            </div>
+            <div>Aspects can be shared across Objects.</div>
+            <div>
+                <br>
+            </div>
+            <div>Keep your code simple and DRY.</div>
+        </section>
+    </section>
+    <section>
+        <section>
+            <h1>Whenjs</h1>
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="icon-cujojs icon-when icon-large"></span>
+        </section>
+        <section>
+            <h2>What is it?</h2>
+            <div>
+                <br>
+            </div>
+            <div>Fast Promise/A+ implementation.</div>
+        </section>
+        <section>
+            <h2>What is it like?</h2>
+            <div>
+                <br>
+            </div>
+            <div>The Q promise library.</div>
+        </section>
+        <section>
+            <h2>What problem does it solve?</h2>
+            <div>
+                <br>
+            </div>
+            <div>Simple management of async code.&nbsp;</div>
+            <div>
+                <br>
+            </div>
+            <div>Sane error management for async code.</div>
+        </section>
+    </section>
+    <section>
+        <section>
+            <h1>msgsjs</h1>
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="icon-cujojs icon-msgs icon-large"></span>
+        </section>
+        <section>
+            <h2>What is it?</h2>
+            <div>PubSub and Message Buses.</div>
+        </section>
+        <section>
+            <h2>What is it like?</h2>
+            <div>Lots of pubsub out there, nothing this full featured.</div>
+        </section>
+        <section>
+            <h2>What problem does it solve?</h2>
+            <div>
+                <br>
+            </div>
+            <div>Manage the complexity of message passing</div>
+            <div>
+                <br>
+            </div>
+            <div>Easily send messages to/from client to server.</div>
+            <div>
+                <br>
+            </div>
+            <div>Add adaptors to transform and handle messages.</div>
+            <div>
+                <br>
+            </div>
+        </section>
+    </section>
+    <section>
+        <section>
+            <h1>restjs</h1>
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="icon-cujojs icon-rest icon-large"></span>
+        </section>
+        <section>
+            <h2>What is it?</h2>
+            <div>
+                <br>
+            </div>
+            <div>HTTP client library for Browser and Node</div>
+        </section>
+        <section>
+            <h2>What is it like?</h2>
+            <div>
+                <br>
+            </div>
+            <div>request</div>
+            <div>
+                <br>
+            </div>
+            <div>jquery</div>
+            <div>
+                <br>
+            </div>
+            <div>XMLHttpRequest</div>
+            <div>
+                <br>
+            </div>
+            <div>Node's HTTP module</div>
+        </section>
+        <section>
+            <h2>What problem does it solve?</h2>
+            <div>
+                <br>
+            </div>
+            <div>One simple API for client and server!</div>
+            <div>
+                <br>
+            </div>
+            <div>Easily add interceptors.&nbsp;</div>
+            <div>
+                <br>
+            </div>
+            <div>Modify and transform data.&nbsp;</div>
+        </section>
+    </section>
+    <section>
+        <section>
+            <h1>POLYjs</h1>
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="icon-cujojs icon-poly icon-large"></span>
+        </section>
+        <section>
+            <h2>What is it?</h2>
+            <div>
+                <br>
+            </div>
+            <div>Set of ES5 shims for JavaScript</div>
+        </section>
+        <section>
+            <h2>What is it like?</h2>
+            <div>
+                <br>
+            </div>
+            <div>LoDash</div>
+            <div>
+                <br>
+            </div>
+            <div>Underscore</div>
+            <div>
+                <br>
+            </div>
+            <div>Kinda....</div>
+        </section>
+        <section>
+            <h2>What problem does it solve?</h2>
+            <div>
+                <br>
+            </div>
+            <div>Shim older JS environments.</div>
+            <div>
+                <br>
+            </div>
+            <div>Add ES5 goodness!</div>
+            <div>
+                <br>
+            </div>
+            <div>Only deal with native ES5 APIs</div>
+        </section>
+    </section>
+    <section>
+        <h2>Thats it!</h2>
+    </section>
+</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+
+
+
+
