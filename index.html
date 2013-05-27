@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>cujojs</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -125,6 +125,20 @@
             </div>
             <div>The pieces can be individually loaded during development but also</div>
         </section>
+        <section>
+        <h2>example</h2>
+<pre><code data-trim contenteditable>
+define(['jquery'], function($) {
+  return function(ele) {
+    $(ele).text('oh hai!');
+  }
+});
+
+curl(['myModule'], function(myModule) {
+  myModule();
+});
+</code></pre>
+        </section>
     </section>
     <section>
         <section>
@@ -157,6 +171,13 @@
             </div>
             <div>Automates building of assets for production</div>
         </section>
+        <section>
+        <h2>example</h2>
+<pre><code data-trim contenteditable>
+node path/to/cram mywebapp/ mywebapp/run.js
+</code></pre>
+        </section>
+    </section>
     </section>
     <section>
         <section>
@@ -200,6 +221,27 @@
             </div>
             <div>Keep your code simple and DRY.</div>
         </section>
+        <section>
+        <h2>example</h2>
+<pre><code data-trim contenteditable>
+meld.around(obj, 'getUsers', function(joinpoint) {
+  var def = when.defer();
+  var promise = def.promise;
+  var client = joinpoint.args[0];
+  client.query('BEGIN');
+  console.log('Starting Transaction');
+  promise.then(function() {
+    client.query('COMMIT');
+  }, function() {
+    client.query('ROLLBACK');
+  });
+  promise.always(client.release);
+  joinpoint.args.unshift(def);
+  joinpoint.proceed();
+  return promise;
+});
+</code></pre>
+        </section>
     </section>
     <section>
         <section>
@@ -234,6 +276,18 @@
                 <br>
             </div>
             <div>Sane error management for async code.</div>
+        </section>
+        <section>
+        <h2>example</h2>
+<pre><code data-trim contenteditable>
+var def = when.defer();
+var promise = def.promise;
+promise.then(function() {
+  console.log('All Done');
+}, function() {
+  console.log('Error!!!');
+});
+</code></pre>
         </section>
     </section>
     <section>
@@ -271,6 +325,17 @@
                 <br>
             </div>
         </section>
+        <section>
+        <h2>example</h2>
+<pre><code data-trim contenteditable>
+var bus = require('msgs').bus();
+bus.channel('tweet');
+bus.outboundAdapter(function(tweet) {
+  console.log(tweet.text);
+}, {input: 'tweet'});
+</code></pre>
+        </section>
+
     </section>
     <section>
         <section>
@@ -322,6 +387,16 @@
             </div>
             <div>Modify and transform data.&nbsp;</div>
         </section>
+        <section>
+        <h2>example</h2>
+<pre><code data-trim contenteditable>
+var rest = require('rest');
+
+rest('/').then(function(response) {
+    console.log('response: ', response);
+});
+</code></pre>
+        </section>
     </section>
     <section>
         <section>
@@ -369,9 +444,25 @@
             </div>
             <div>Only deal with native ES5 APIs</div>
         </section>
+        <section>
+        <h2>example</h2>
+<pre><code data-trim contenteditable>
+//adds es5 goodness to older environments
+Array.prototype.forEach;
+Array.prototype.map;
+Array.prototype.some;
+Array.prototype.every;
+Array.prototype.indexOf;
+Array.prototype.lastIndexOf;
+Array.prototype.reduce;
+Array.prototype.reduceRight;
+Array.prototype.isArray;
+</code></pre>
+        </section>
     </section>
     <section>
-        <h2>Thats it!</h2>
+        <h2>www.cujojs.com</h2>
+        <h2>know.cujojs.com/tutorials</h2>
     </section>
 </div>
 
