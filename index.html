@@ -95,9 +95,11 @@
             <td><span class="icon-cujojs icon-poly icon-list"></span> poly</td>
             <td><span class="icon-cujojs icon-wire icon-list"></span> wire</td>
           </tr>
+          <!--
           <tr>
             <td><span class="icon-cujojs icon-cola icon-list"></span> cola</td>
           </tr>
+          -->
         </table>
     </section>
     <section>
@@ -178,6 +180,52 @@ node path/to/cram mywebapp/ mywebapp/run.js
 </code></pre>
         </section>
     </section>
+    <section>
+        <section>
+            <h1>Whenjs</h1>
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="icon-cujojs icon-when icon-large"></span>
+        </section>
+        <section>
+            <h2>What is it?</h2>
+            <div>
+                <br>
+            </div>
+            <div>Fast Promise/A+ implementation.</div>
+        </section>
+        <section>
+            <h2>What is it like?</h2>
+            <div>
+                <br>
+            </div>
+            <div>The Q promise library.</div>
+        </section>
+        <section>
+            <h2>What problem does it solve?</h2>
+            <div>
+                <br>
+            </div>
+            <div>Simple management of async code.&nbsp;</div>
+            <div>
+                <br>
+            </div>
+            <div>Sane error management for async code.</div>
+        </section>
+        <section>
+        <h2>example</h2>
+<pre><code data-trim contenteditable>
+var def = when.defer();
+var promise = def.promise;
+promise.then(function() {
+  console.log('All Done');
+}, function() {
+  console.log('Error!!!');
+});
+</code></pre>
+        </section>
     </section>
     <section>
         <section>
@@ -239,53 +287,6 @@ meld.around(obj, 'getUsers', function(joinpoint) {
   joinpoint.args.unshift(def);
   joinpoint.proceed();
   return promise;
-});
-</code></pre>
-        </section>
-    </section>
-    <section>
-        <section>
-            <h1>Whenjs</h1>
-          <br>
-          <br>
-          <br>
-          <br>
-          <span class="icon-cujojs icon-when icon-large"></span>
-        </section>
-        <section>
-            <h2>What is it?</h2>
-            <div>
-                <br>
-            </div>
-            <div>Fast Promise/A+ implementation.</div>
-        </section>
-        <section>
-            <h2>What is it like?</h2>
-            <div>
-                <br>
-            </div>
-            <div>The Q promise library.</div>
-        </section>
-        <section>
-            <h2>What problem does it solve?</h2>
-            <div>
-                <br>
-            </div>
-            <div>Simple management of async code.&nbsp;</div>
-            <div>
-                <br>
-            </div>
-            <div>Sane error management for async code.</div>
-        </section>
-        <section>
-        <h2>example</h2>
-<pre><code data-trim contenteditable>
-var def = when.defer();
-var promise = def.promise;
-promise.then(function() {
-  console.log('All Done');
-}, function() {
-  console.log('Error!!!');
 });
 </code></pre>
         </section>
@@ -460,6 +461,107 @@ Array.prototype.isArray;
 </code></pre>
         </section>
     </section>
+    <section>
+        <section>
+            <h1>wirejs</h1>
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="icon-cujojs icon-wire icon-large"></span>
+        </section>
+        <section>
+            <h2>What is it?</h2>
+            <div>
+                <br>
+            </div>
+            <div>Application Composition (I.O.C.)</div>
+        </section>
+        <section>
+            <h2>What is it like?</h2>
+            <br>
+            <div>Nothing I know of in the JS world.</div>
+
+        </section>
+        <section>
+            <h2>What problem does it solve?</h2>
+            <div>
+                <br>
+            </div>
+            <div>Easily "wire up" dependencies in your application based on config!</div>
+        </section>
+        <section>
+        
+<pre><code data-trim contenteditable>
+curl(['hello/app/controller',
+'text!hello/app/template.html',
+'i18n!hello/app/strings.js',
+'hello/app/view', 
+'jquery'], 
+function(Controller, template, strings, View, $) {
+  var $ele = $('span:eq(0)'); 
+  var controller = new Controller($ele);
+  var view = new View();
+  controller.on(view);
+  view.render(template, strings);
+});
+</code></pre>
+<pre><code data-trim contenteditable>
+define({ // Wire spec
+  controller: {
+    create: 'hello/app/controller',
+    properties: {node: { $ref: 'first!span', at: 'view' }},
+    on: { view: { 'input': 'update' } }
+  },
+  view: {
+    render: {
+      template: { module: 'text!hello/app/template.html' },
+      replace: { module: 'i18n!hello/app/strings.js' }
+    },
+    insert: { last: 'root' }
+  },
+  $plugins: ['wire/dom', 'wire/dom/render', 'wire/on']
+});
+</code></pre>
+        </section>
+    </section>
+<!--
+    <section>
+        <section>
+            <h1>colajs</h1>
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="icon-cujojs icon-cola icon-large"></span>
+        </section>
+        <section>
+            <h2>What is it?</h2>
+            <div>
+                <br>
+            </div>
+            <div>Data Binding</div>
+        </section>
+        <section>
+            <h2>What is it like?</h2>
+            <br>
+            <div>KnockoutJS</div>
+
+        </section>
+        <section>
+            <h2>What problem does it solve?</h2>
+            <div>
+                <br>
+            </div>
+            <div>Automatically update DOM values when changes happen.</div>
+        </section>
+        <section>
+        
+<pre><code data-trim contenteditable>
+</code></pre>
+        </section>
+    </section>
+-->`
     <section>
         <h2>www.cujojs.com</h2>
         <h2>know.cujojs.com/tutorials</h2>
